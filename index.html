@@ -2,118 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>HTML 5 Structured Document</title>
+  <title>imdb-rebuild</title>
+  <style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  .row::before,
+  .row::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  
+  .one,
+  .one-third,
+  .two-thirds,
+  .one-fourth,
+  .half {
+    width: 100%;
+  }
+  /* 
+  * Any styling that should be applied to screen widths larger
+  * than a mobile device: tablet, laptop, desktop, etc. 
+  */
+  
+  @media only screen and (min-width: 800px) {
+    .one {
+      width: 100%;
+    }
+    .half {
+      width: calc(100% / 2);
+    }
+    .one-third {
+      width: calc(100% / 3);
+    }
+    .one-fourth {
+      width: calc(100% / 4);
+    }
+    .two-thirds {
+      width: calc(100% / 3 * 2);
+    }
+    .column {
+      float: left;
+    }
+  }
+  /* Styling */
+  
+  body {
+    background: #000000;
+    color: #f7f7f7;
+    font-size: 1.3em;
+    font-family: 'Lato';
+    padding: 0 10px;
+  }
+  
+  .column {
+    border: 1px solid #666;
+    background: #343436;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+</style>
 </head>
 <body>
+  <nav>
+    <ul>
+    <li>
+      menu 1
+    </li>
+    <li>
+      menu 2
+    </li>    
+    <li>
+      menu 3
+    </li>
+  </ul>
+  </nav>
+
   <main>
-    <div>
-      <img id="logo" src="./logo.jpg" alt="logo needs an alt desc" />
 
-      <ul>
-        <li><a href="default.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-      
-    
-    <section class="leftcolumn">                       
-      <div class="biography">
-        <header>
-          <h1>ELIZA DUSHKU</h1>
-        </header>
-        <img src="./Eliza.jpg" alt="Image of Eliza" />
-        Actress | Producer
-        <p>   
-          Eliza Dushku was born in Boston, Massachusetts, to Judith (Rasmussen), a political science professor, and Philip R. Dushku, a teacher and administrator. Her father is Albanian and her mother is American (of Danish, Irish, English, and German descent). She was discovered at the end of a five-month search throughout the United States for the perfect ... <a href="http://www.imdb.com/name/nm0244630/bio?ref_=nm_ov_bio_sm">See full bio</a> »
-        </p>
-        <p>
-          <b>Born:</b> December 30, 1980 in Boston, Massachusetts, USA
-        </p>
-      </div>
-      <div class="nominations">
-          <h3>7 Nominations. <a href="http://www.imdb.com/name/nm0244630/awards?ref_=nm_awd">See more awards</a></h3>
-      </div>
-
-      <div class="filmography">
-        <h1>Filmography</h1>
-        <h2>Actress</h2>
-        <!-- Change ul to dl -->
-        <dl>
-          <div>
-            <dt>
-              Eloise
-            </dt>
-            <dd>
-              Pia Carter
-            </dd>
-          </div>
-          <div>
-            <dt>
-              The Saint (TV Movie)
-            </dt>
-            <dd>
-              Patricia Holm
-            </dd>
-          </div>
-          <div>
-            <dt>
-              Con Man (TV Series)
-            </dt>
-            <dd>
-              Cindy
-            </dd>
-          </div>
-          <div>
-            <dt>
-              Princess Rap Battle (TV Series Short)
-            </dt>
-            <dd>
-              Rapunzel
-            </dd>
-          </div>
-          <div>
-            <dt>
-              Banshee (TV Series)
-            </dt>
-            <dd>
-              Veronica Dawson
-            </dd>
-          </div>
-        </dl>
-      </div>
-      <div class="contribute">
-        <h1>Contribute to this page</h1>
-        <button>Edit Page</button>
-        <button>Add Resume</button>
-      </div>
-    </section>
-
-    <section class="rightcolumn">
-      <div class="quicklinks">
-        <h1>QUICK LINKS</h1>
-
-        <a href="http://www.imdb.com/name/nm0244630/bio?ref_=nm_ql_1">Biography</a>
-        <a href="http://www.imdb.com/name/nm0244630/?nmdp=1&ref_=nm_ql_4#filmography">Filmography (by job)</a>
-        <a href="http://www.imdb.com/name/nm0244630/awards?ref_=nm_ql_2">Awards</a>
-        <a href="http://www.imdb.com/name/nm0244630/videogallery?ref_=nm_ql_5">Trailers and Videos</a>
-        <a href="http://www.imdb.com/name/nm0244630/mediaindex?ref_=nm_ql_3">Photo Gallery</a>
-
-        <a href="">Explore More</a>
-      </div>
-      <div class="oscarDecotations">
-        <h1>Most Decoratd Oscar Films of All Time</h1>
-        <img src="./Audrey.jpg" alt="LADY IN THE HAT..."/>
-        <p>While it's an honor just to be nominated, some movies have hauled away an armload of statues on Oscar night. See our gallery of films that earned four or more Academy Awards.</p>
-        <a href="http://www.imdb.com/imdbpicks/most-decorated-movies/rg4090600192?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=2919133182&pf_rd_r=0AXQ0FPXDSXTRGWKJ9ZJ&pf_rd_s=right-3&pf_rd_t=15011&pf_rd_i=nm0244630&ref_=nm_pks_mdo_rhs_sm">View the gallery</a> >>
-      </div>
-      <div class="relatedNews">
-        <h1>Related News</h1>
-      </div>
-      
-    </section>
+  <div class="row">
+      <div class="half column"> Half column </div>
+      <div class="half column"> Half column </div>
+  </div>
+  
+  <div class="row">
+      <div class="column">  column </div>
+      <div class="column">  column </div>
+      <div class="column">  column </div>
+      <div class="column">  column </div>
+  </div>
 
   </main>
+
 </body>
 </html>
