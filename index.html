@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>imdb-rebuild</title>
+  <title>imdb-rebuild test</title>
+  
   <style>
   html {
     box-sizing: border-box;
   }
   
+  .page-wrap {
+  width: 960px;
+  margin: 0 auto;
+}           
+    
   *,
   *:before,
   *:after {
@@ -73,28 +79,53 @@
   h1 {
     text-align: center;
   }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
 </style>
 </head>
-<body>
+<body class="page-wrap">
+  <img src="./logo.jpg" />
   <nav>
     <ul>
     <li>
-      menu 1
+      <a href="#">menu 1 </a>
     </li>
     <li>
-      menu 2
+      <a href="#">menu 2</a>
     </li>    
     <li>
-      menu 3
+      <a href="#">menu 3</a>
     </li>
   </ul>
   </nav>
 
   <main>
 
-  <div class="row">
-      <div class="half column"> Half column </div>
-      <div class="half column"> Half column </div>
+  <div class="column">
+      <div class="column">  
+        <img src="./girl.jpg" /> 
+        </div>
+        <div class=column>
+TYPE MIDDLE CONTENT HERE
+        </div>
+      
+      <div class="column"> 
+TYPE RIGHT COLUMN HERE 
+      </div>
   </div>
   
   <div class="row">
